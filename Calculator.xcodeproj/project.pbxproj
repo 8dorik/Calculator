@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		59052330262990AA0040DC77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5905232F262990AA0040DC77 /* AppDelegate.swift */; };
 		59052332262990AA0040DC77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59052331262990AA0040DC77 /* SceneDelegate.swift */; };
-		59052334262990AA0040DC77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59052333262990AA0040DC77 /* ViewController.swift */; };
 		59052337262990AA0040DC77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59052335262990AA0040DC77 /* Main.storyboard */; };
 		59052339262990AB0040DC77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59052338262990AB0040DC77 /* Assets.xcassets */; };
 		5905233C262990AB0040DC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5905233A262990AB0040DC77 /* LaunchScreen.storyboard */; };
 		59052347262990AB0040DC77 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59052346262990AB0040DC77 /* CalculatorTests.swift */; };
 		59052352262990AB0040DC77 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59052351262990AB0040DC77 /* CalculatorUITests.swift */; };
+		59052366262A4EC10040DC77 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59052365262A4EC10040DC77 /* NewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		5905232C262990AA0040DC77 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5905232F262990AA0040DC77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59052331262990AA0040DC77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		59052333262990AA0040DC77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59052336262990AA0040DC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59052338262990AB0040DC77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5905233B262990AB0040DC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		5905234D262990AB0040DC77 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59052351262990AB0040DC77 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		59052353262990AB0040DC77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59052365262A4EC10040DC77 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				5905232F262990AA0040DC77 /* AppDelegate.swift */,
 				59052331262990AA0040DC77 /* SceneDelegate.swift */,
-				59052333262990AA0040DC77 /* ViewController.swift */,
+				59052365262A4EC10040DC77 /* NewViewController.swift */,
 				59052335262990AA0040DC77 /* Main.storyboard */,
 				59052338262990AB0040DC77 /* Assets.xcassets */,
 				5905233A262990AB0040DC77 /* LaunchScreen.storyboard */,
@@ -258,9 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59052334262990AA0040DC77 /* ViewController.swift in Sources */,
 				59052330262990AA0040DC77 /* AppDelegate.swift in Sources */,
 				59052332262990AA0040DC77 /* SceneDelegate.swift in Sources */,
+				59052366262A4EC10040DC77 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
