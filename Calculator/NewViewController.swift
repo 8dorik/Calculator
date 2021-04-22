@@ -19,11 +19,16 @@ class NewViewController: UIViewController {
     //
 
     func noZero(num : Double)->String{
-        if Double(Int(num)) == num{
-            return String(Int(num))
+        if num < 9999999999{
+            if Double(Int(num)) == num{
+                return String(Int(num))
+            }
+            else{
+                return String(round(100000000*num)/100000000)
+            }
         }
         else{
-            return String(round(100000000*num)/100000000)
+            return "MAX"
         }
     }
     //
@@ -53,46 +58,46 @@ class NewViewController: UIViewController {
     @IBAction func digitsPressed(_ sender: UIButton) {
         if answer.text!.count < 10{
             
-        clearButton.setTitle("C", for: .normal)
-        var digit = sender.currentTitle!
+            clearButton.setTitle("C", for: .normal)
+            var digit = sender.currentTitle!
         
-        if sender.tag == 1 && Double(answer.text!) == nil{
-            digit = "0."
-        }
-        
-        if sender.tag == 1 && ((answer.text!.contains(".")) == true){
-            digit = ""
-        }
-            
-        if actionMade == true && operation != 0{
-            swapColorsForTag(tagNum: operation)
-            swappedColor = false
-            answer.text = digit
-            actionMade = false
-        }
-        
-        else if (actionMade == true && operation == 0) || (answer.text == "0" && sender.tag != 1) || (afterEqual == true && actionMade == true){
-            if afterEqual == true{
-                afterEqual = false
+            if sender.tag == 1 && Double(answer.text!) == nil{
+                digit = "0."
             }
-            answer.text = digit
-            actionMade = false
-        }
+            
+            if sender.tag == 1 && ((answer.text!.contains(".")) == true){
+                digit = ""
+            }
+                
+            if actionMade == true && operation != 0{
+                swapColorsForTag(tagNum: operation)
+                swappedColor = false
+                answer.text = digit
+                actionMade = false
+            }
+            
+            else if (actionMade == true && operation == 0) || (answer.text == "0" && sender.tag != 1) || (afterEqual == true && actionMade == true) || answer.text == "MAX"{
+                if afterEqual == true{
+                    afterEqual = false
+                }
+                answer.text = digit
+                actionMade = false
+            }
         
-        else{
-            answer.text! += digit
-        }
+            else{
+                answer.text! += digit
+            }
         
-        if let answertext = Double(answer.text!){
-            numberFromScreen = answertext
-        }
+            if let answertext = Double(answer.text!){
+                numberFromScreen = answertext
+            }
         }
     }
     //
     
     @IBAction func actions(_ sender: UIButton) {
         
-        if answer.text != "" && sender.tag != 9 && sender.tag != 14 && sender.tag != 8 && sender.tag != 7{
+        if answer.text != "" && sender.tag != 9 && sender.tag != 14 && sender.tag != 8 && sender.tag != 7 && answer.text != "MAX"{
             if Double(answer.text!) != nil{
                 firstNumber = Double(answer.text!)!
             }
@@ -151,13 +156,16 @@ class NewViewController: UIViewController {
         }
 
         else if sender.tag == 7{
-            if !answer.text!.isEmpty{
+            if answer.text!.count > 0{
                 if Double(answer.text!) != nil{
                 answer.text!.removeLast()
                 }
             }
             if let answertext = Double(answer.text!){
                 numberFromScreen = answertext
+            }
+            else{
+                answer.text = "0"
             }
         }
         
@@ -183,6 +191,7 @@ class NewViewController: UIViewController {
             }
             afterEqual = true
             }
+            
         }
 
         else if sender.tag == 8{
